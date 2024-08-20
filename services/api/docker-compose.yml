@@ -1,0 +1,16 @@
+
+services:
+  api:
+    container_name: msa-api
+    build: .
+    image: msa-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - mydb:/db
+    environment:
+      - DB_URL=sqlite:////db/mydb.db
+    restart: always
+
+volumes:
+  mydb:
