@@ -19,6 +19,9 @@ app.include_router(user_router)
 app.include_router(lista_router)
 app.include_router(security_router)
 
+@app.get("/")
+async def root():
+    return {"message": "Explore /docs or /redoc"}
 
 if __name__ == "__main__":
     import uvicorn
