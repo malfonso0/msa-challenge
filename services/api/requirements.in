@@ -1,0 +1,7 @@
+sqlalchemy
+fastapi[standard]
+pydantic[email]
+uvicorn
+sqlmodel
+passlib
+pyjwt
